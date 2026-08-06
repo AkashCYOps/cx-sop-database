@@ -9240,8 +9240,12 @@ mark{
   "globalRules": {
     "daily_standards": [
       {
+        "title": "Daily target: 2 misses in a row, or 3 in a week, blocks your login",
+        "detail": "Failing to hit your assigned daily target for 2 consecutive days, or on 3 days within the same week, blocks your login access. Access is restored only after approval from Shantanu Kumar."
+      },
+      {
         "title": "Case ownership: assign it to yourself",
-        "detail": "The moment you pick up a case, assign it to your own name in Salesforce. An unassigned or wrongly-assigned case is the fastest way for a customer to fall through the cracks."
+        "detail": "The moment you pick up a case, assign it to your own name in Salesforce. An unassigned or wrongly-assigned case is the fastest way for a customer to fall through the cracks. This applies with zero tolerance to difficult, reassigned, overdue, and high-TAT cases — they must be actively worked, never deprioritized. Deliberately leaving a case unattended, or letting it lapse into unassigned, results in a PIP with no discussion."
       },
       {
         "title": "First response within 24 hours — no exceptions",
@@ -9249,7 +9253,7 @@ mark{
       },
       {
         "title": "Log every update, no matter how small",
-        "detail": "Every single update on a case — even a one-line change or a quick call that didn’t go anywhere — must be logged in the case notes. Small updates left unlogged are exactly what cause confusion when another teammate picks up the case."
+        "detail": "Every single update on a case — even a one-line change or a quick call that didn’t go anywhere — must be logged in the case notes. Small updates left unlogged are exactly what cause confusion when another teammate picks up the case. Update notes daily: every entry needs the action taken, the next step, and a supporting screenshot wherever applicable."
       },
       {
         "title": "Progress mail: sent daily while unresolved, backed by a call",
@@ -9260,12 +9264,12 @@ mark{
         "detail": "Make 4 call attempts per day at different times of day (not back-to-back). Attach a screenshot of each individual call attempt to internal notes."
       },
       {
-        "title": "Case closure on RNR: only after 48 hours + 8 call attempts",
-        "detail": "A case can only be closed on RNR grounds after 48 hours have passed AND at least 8 call attempts have been made. The closure mail must include the date/time of all 8+ attempts made to reach the customer."
+        "title": "⚠️ Updated — never close a case on RNR",
+        "detail": "This replaces the old 48-hour / 8-attempt closure rule: cases must NOT be closed on RNR grounds, full stop. Keep following up with the customer — by WhatsApp and/or Zoom, in addition to calls — until the case is actually resolved. Document every single follow-up attempt in the case notes."
       },
       {
-        "title": "Escalations — especially cross-functional — need the form filled",
-        "detail": "Any escalation, particularly ones crossing into another team’s territory (Payments, Tech, Mentor Ops, etc.), requires the Customer Issue Escalation form to be filled out. Don’t rely on a Slack message or verbal handoff alone.",
+        "title": "Customer Issue Form and Support Team Form — every time, wherever applicable",
+        "detail": "The Customer Issue Form and the Support Team Form must both be completed wherever applicable — not only on cross-functional escalations. Misses will not be tolerated.",
         "link": "https://forms.office.com/Pages/ResponsePage.aspx?id=Ddv2IPaeBk6woZ6Y2Si_SBi4njcL58tFh7jlCQhCI5ZUNU5GRjE2V0NWM05MMFNDNVAyM0dXSDBBOS4u"
       },
       {
@@ -9275,12 +9279,26 @@ mark{
       {
         "title": "Ask for a Google/Trustpilot review on fast or permanent resolutions",
         "detail": "If a case is closed within 1 day, or you’ve provided a permanent (not workaround) resolution, ask the customer for a Google review or Trustpilot review. These moments are when customers are happiest — don’t let them pass by."
+      },
+      {
+        "title": "Monthly KPI: TAT and CSAT — no exceptions",
+        "detail": "TAT and CSAT targets are monthly KPIs and must be achieved without exception, every month. See the Incentive Criteria tab for exactly how these tie to payout."
+      },
+      {
+        "title": "Before contacting the customer: review, then confirm",
+        "detail": "Every outbound contact starts with three checks — review the customer's chat history, review previous case history, and confirm mentor availability. Only then reach out."
+      },
+      {
+        "title": "EOD report — shared every day, without fail",
+        "detail": "Your End-of-Day report must be shared every single working day. No exceptions."
       }
     ],
     "mentor_slot_cases": {
-      "title": "Mentor / Schedule Change cases — special RNR handling",
+      "title": "Mentor / Schedule Change cases — slot communication rules",
       "points": [
-        "If the customer is RNR on a mentor-change or reschedule case, email them the mentor’s available slots directly — don’t just wait for them to respond to a callback attempt.",
+        "Send the customer the mentor's available slots daily via BOTH email and WhatsApp — this applies to every schedule/mentor-change case, not just RNR ones. Use the Available Mentor Slots templates in the Email Templates tab.",
+        "Every slot message — email and WhatsApp — must include the disclaimer that slots are subject to availability.",
+        "If the customer is RNR on a mentor-change or reschedule case, email them the mentor's available slots directly — don't just wait for them to respond to a callback attempt.",
         "Mentor slot data must be refreshed daily. Open slots fill up within 30 minutes, so a slot list from yesterday is not reliable — always pull a same-day check before sending it to a customer."
       ],
       "applies_to": [
@@ -9318,7 +9336,7 @@ mark{
         "Applies whenever the customer is RNR (Ring No Response) on that day’s call attempts.",
         "Make 4 call attempts per day at different times, with a screenshot of each individual attempt attached to internal notes.",
         "Send the combined Progress + RNR Mail for that day — pick the template tier matching how long the case has been open, and list every call attempt as its own bullet point.",
-        "The case can only be closed on RNR grounds after 48 hours AND at least 8 call attempts — use the dedicated 48-Hour Closure mail for that, listing all 8+ attempts."
+        "⚠️ Updated: do not close the case on RNR grounds, no matter how many days or attempts have passed. Keep following up via WhatsApp/Zoom until it's actually resolved, and document every attempt."
       ]
     },
     "glossary": [
@@ -9357,6 +9375,26 @@ mark{
       {
         "term": "Stitched Batch",
         "meaning": "Two batches that are linked together and must always be updated identically — changing one without the other is not allowed."
+      },
+      {
+        "term": "TAT",
+        "meaning": "Turnaround Time — how long a case takes to resolve. Tracked as a monthly KPI alongside CSAT."
+      },
+      {
+        "term": "RCA",
+        "meaning": "Root Cause Analysis — the investigation into what caused a customer escalation, used to determine whether it was an RM error."
+      },
+      {
+        "term": "PIP",
+        "meaning": "Performance Improvement Plan — the formal corrective process triggered by deliberately leaving cases unattended or letting them go unassigned."
+      },
+      {
+        "term": "KPI",
+        "meaning": "Key Performance Indicator — the monthly-tracked metrics (TAT and CSAT) tied to incentive payout."
+      },
+      {
+        "term": "EOD Report",
+        "meaning": "End-of-Day report — the daily summary every advisor must share, without exception."
       }
     ]
   }
@@ -9491,7 +9529,7 @@ mark{
         {
           "id": "rnr_mail_48hr",
           "title": "RNR Mail — 48 Hour Closure",
-          "whenToUse": "Sent only once 48 hours have passed AND at least 8 call attempts have been made across both days — this closes the case on RNR grounds. This is separate from the daily Progress + RNR mails above.",
+          "whenToUse": "⚠️ SUPERSEDED by updated policy: cases must not be closed on RNR grounds anymore. Do not use this template — kept here for reference only. Continue follow-ups via WhatsApp/Zoom instead (see Progress + RNR Mail templates above).",
           "isNew": true,
           "variants": [
             {
@@ -9738,6 +9776,32 @@ mark{
               "audience": "Parent",
               "subject": "Mentor change options for you — Case No: {{case_number}}",
               "body": "Dear Parent,\n\nGreetings from Codeyoung!\n\nThis is regarding Case No: {{case_number}}. We've been working on finding a new mentor for [Student Name] at the current schedule ([Day, Time]), but unfortunately no mentor is available at that exact slot right now.\n\nHere are the options we can offer:\n\n• Option A — Same Schedule, Different Mentor: [Mentor Name(s)] is/are available to teach [Course Name] at your current schedule of [Day, Time].\n• Option B — Same Mentor, Different Schedule: [Mentor Name] can take [Student Name] if we move the class to [Day, Time].\n\nPlease let us know which option works best for you, and we'll confirm it right away.\n\nBest regards,\nCodeyoung Support Team\nwww.codeyoung.com"
+            }
+          ]
+        },
+        {
+          "id": "available_slots_email",
+          "title": "Available Mentor Slots — Daily Update (Email)",
+          "whenToUse": "Sent daily to every schedule/mentor-change case with that day's open mentor slots — not only when the customer is RNR. Pair with the WhatsApp version below, and refresh the slot list same-day before sending.",
+          "isNew": true,
+          "variants": [
+            {
+              "audience": "Parent",
+              "subject": "Available Mentor Slots for [Student Name] — Case No: {{case_number}}",
+              "body": "Dear Parent,\n\nGreetings from Codeyoung!\n\nHere are today's available slots for [Student Name]'s [schedule/mentor] change (Case No: {{case_number}}):\n\n• [Slot 1 — Day, Time]\n• [Slot 2 — Day, Time]\n• [Slot 3 — Day, Time]\n\nPlease let us know your preferred slot at the earliest so we can confirm it.\n\nPlease note: all slots are subject to availability and may change without prior notice.\n\nBest regards,\nCodeyoung Support Team\nwww.codeyoung.com"
+            }
+          ]
+        },
+        {
+          "id": "available_slots_whatsapp",
+          "title": "Available Mentor Slots — Daily Update (WhatsApp)",
+          "whenToUse": "WhatsApp counterpart to the email above — send both, every day, until the schedule/mentor change is resolved.",
+          "isNew": true,
+          "variants": [
+            {
+              "audience": "Parent",
+              "subject": "WhatsApp Message — Available Mentor Slots",
+              "body": "Hi [Parent Name], here are today's available mentor slots for [Student Name]:\n1. [Slot 1 — Day, Time]\n2. [Slot 2 — Day, Time]\n3. [Slot 3 — Day, Time]\n\nPlease confirm your preferred slot at the earliest.\nNote: slots are subject to availability.\n– Codeyoung Support Team"
             }
           ]
         }
@@ -10578,6 +10642,27 @@ mark{
             [
               ">5% CSAT's (i.e. 4 and 5 stars) responses",
               "₹50 per response"
+            ]
+          ]
+        },
+        {
+          "title": "Customer Escalation Deductions — applies when RCA confirms RM error (tracked monthly)",
+          "columns": [
+            "Confirmed RM-error escalations",
+            "Incentive reduction"
+          ],
+          "rows": [
+            [
+              "2 instances",
+              "25%"
+            ],
+            [
+              "4 instances",
+              "50%"
+            ],
+            [
+              "5+ instances",
+              "75%"
             ]
           ]
         }
